@@ -3,10 +3,16 @@ package com.ubaya.advweek4.util
 import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.databinding.BindingAdapter
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import com.ubaya.advweek4.R
 import java.lang.Exception
+
+@BindingAdapter("android:imageUrl", "android:progressBar")
+fun loadPhotoURL(view:ImageView, url:String, pb:ProgressBar){
+    view.LoadImage(url,pb)
+}
 
 fun ImageView.LoadImage(url: String, progressBar: ProgressBar){
     Picasso.get()
