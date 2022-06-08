@@ -34,7 +34,7 @@ class StudentDetailFragment : Fragment() {
         //val idStudent = 16055
         Log.d("showVolley", idStudent.toString())
 
-        detailModel.fetch(idStudent)
+        detailModel.fetch(idStudent.toInt())
 
         observeViewModel()
     }
